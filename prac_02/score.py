@@ -7,8 +7,11 @@ import random
 
 def main():
     score = float(input("Enter score: "))
-    print(f"User score {score} is {determine_result(score)}")
-    random_score = random.randint(1, 100)
+    result = determine_result(score)
+    print(f"User score {score} is {result}")
+    if result == "Excellent":
+        print("You get a prize!")
+    random_score = random.randint(1, 101)
     print(f"Random: {random_score} = {determine_result(random_score)}")
 
 
