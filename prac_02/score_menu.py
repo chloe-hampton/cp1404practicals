@@ -9,8 +9,7 @@ def main():
     choice = input("> ")
     while choice != "Q":
         if choice == "G":
-            # TODO: get_valid_score function
-            ...
+            score = get_valid_input("Score: ", 1, 100)
         elif choice == "P":
             # TODO: determine_result function
             ...
@@ -21,3 +20,14 @@ def main():
             print("Invalid input")
         print(MENU)
         choice = input("> ")
+
+
+def get_valid_input(prompt, low, high):
+    number = float(input(prompt))
+    while number < low or number > high:
+        print("Invalid input.")
+        number = float(input(prompt))
+    return number
+
+
+main()
