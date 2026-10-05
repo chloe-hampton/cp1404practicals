@@ -11,9 +11,9 @@ def determine_file_size(file_name):
         with open(file_name, "r") as in_file:
             for line in in_file:
                 number_of_lines += 1
-            return number_of_lines
+        return number_of_lines
     except FileNotFoundError:
-        return "File not found"
+        return f"ERROR: {file_name} does not exist!"
 
 
 main()
