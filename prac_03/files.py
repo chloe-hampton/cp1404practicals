@@ -17,7 +17,6 @@ second_number = int(in_file.readline())
 in_file.close()
 print(first_number + second_number)
 
-
 # Question 4
 result = 0
 with open("numbers.txt", "r") as in_file:
