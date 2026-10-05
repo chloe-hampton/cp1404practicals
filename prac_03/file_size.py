@@ -1,6 +1,8 @@
 def main():
     file_name = input("Enter filename: ")
-    print(determine_file_size(file_name))
+    while file_name != "":
+        print(determine_file_size(file_name))
+        file_name = input("Enter filename: ")
 
 
 def determine_file_size(file_name):
