@@ -9,7 +9,7 @@ FILENAME = "subject_data.txt"
 def main():
     """Program to load and display subject data from file."""
     data = load_data(FILENAME)
-    print(data)
+    display_subject_details(data)
 
 
 def load_data(filename=FILENAME):
@@ -22,6 +22,11 @@ def load_data(filename=FILENAME):
         data.append(record) # Adds each record to data as a nested list
     input_file.close()
     return data
+
+
+def display_subject_details(data):
+    for subject, lecturer, number_of_students in data:
+        print(f"{subject} is taught by {lecturer} and has {number_of_students} students")
 
 
 main()
